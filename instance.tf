@@ -7,4 +7,8 @@ resource "aws_instance" "The-Empire-Basic" {
 	} 
 }
 
-
+resource "aws_instance" "The-Empire-Basic" {
+	provisioner "local-exec" { 
+		command = "echo 'this is a test'"
+	}	
+}
