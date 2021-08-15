@@ -1,4 +1,0 @@
-i was having an error pushing to origin 
-pulled and then pushed but kept getting the same error
-deleted the local repo then recloned it
-works now
