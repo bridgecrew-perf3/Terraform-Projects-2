@@ -2,10 +2,13 @@ resource "aws_instance" "The-Empire-Basic" {
 	ami = var.AMIS[var.AWS_REGION]
 	instance_type = "t2.micro"
 	key_name = "dp-scarif"
+	vpc_security_group_ids = [aws_security_group.allow_traffic.id]
 	tags = {
 		Name = "The Empire - DP Terraform Test"
 	} 
 	
+	
+	#sends the echo command to the aws linux instance	
 	provisioner "local-exec" { 
 		command = "echo 'this is a test'"
 	}
